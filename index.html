@@ -8,32 +8,43 @@
 body {
     font-family: 'Georgia', serif;
     background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
 }
 
+/* Container */
 .container {
     background: white;
-    padding: 35px;
-    border-radius: 15px;
+    padding: 45px;
+    border-radius: 22px;
     text-align: center;
-    max-width: 420px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    max-width: 520px;
+    width: 95%;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
-h1, .question, .buttons {
-    transition: opacity 0.5s;
+/* Titel */
+h1 {
+    font-size: 44px;
+    margin-bottom: 20px;
 }
 
+/* Frage */
+.question {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
 button {
-    padding: 12px 20px;
-    margin: 10px;
+    padding: 18px 30px;
+    margin: 12px;
     border: none;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 14px;
+    font-size: 26px;
     cursor: pointer;
 }
 
@@ -46,10 +57,32 @@ button {
     background-color: #ccc;
 }
 
+/* Brieftext */
 .letter {
     display: none;
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 28px;
+    line-height: 2.0;
+}
+
+/* HANDY: NOCH GRÖSSER */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    .question {
+        font-size: 32px;
+    }
+
+    .letter {
+        font-size: 32px;
+        line-height: 2.1;
+    }
+
+    button {
+        font-size: 30px;
+        padding: 20px 34px;
+    }
 }
 </style>
 </head>
@@ -69,7 +102,7 @@ button {
         <p>
             Liebe Henriette,<br><br>
             ab dem Moment, in dem du in meinem Leben bist,
-            fühlt sich alles leichter an.
+            fühlt sich alles leichter an.<br><br>
             Du bist mein Lächeln, mein Gedanke
             und mein Zuhause. ❤️<br><br>
             Für immer dein.
@@ -80,7 +113,6 @@ button {
 <script>
 function openLetter() {
     document.getElementById("letter").style.display = "block";
-
     document.getElementById("title").style.display = "none";
     document.getElementById("question").style.display = "none";
     document.getElementById("buttons").style.display = "none";
