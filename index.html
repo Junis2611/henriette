@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Liebesbrief 💌</title>
+
+<style>
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 420px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1, .question, .buttons {
+    transition: opacity 0.5s;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.open {
+    background-color: #ff5e78;
+    color: white;
+}
+
+.close {
+    background-color: #ccc;
+}
+
+.letter {
+    display: none;
+    font-size: 18px;
+    line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1 id="title">💌 Ein Liebesbrief</h1>
+    <p class="question" id="question">Möchtest du ihn öffnen?</p>
+
+    <div class="buttons" id="buttons">
+        <button class="open" onclick="openLetter()">Öffnen</button>
+        <button class="close" onclick="dontOpen()">Nicht öffnen</button>
+    </div>
+
+    <div class="letter" id="letter">
+        <p>
+            Liebe Henriette,<br><br>
+            ab dem Moment, in dem du in meinem Leben bist,
+            fühlt sich alles leichter an.
+            Du bist mein Lächeln, mein Gedanke
+            und mein Zuhause. ❤️<br><br>
+            Für immer dein.
+        </p>
+    </div>
+</div>
+
+<script>
+function openLetter() {
+    document.getElementById("letter").style.display = "block";
+
+    document.getElementById("title").style.display = "none";
+    document.getElementById("question").style.display = "none";
+    document.getElementById("buttons").style.display = "none";
+}
+
+function dontOpen() {
+    alert("Dann halt nicht... Blödi... 💔");
+}
+</script>
+
+</body>
+</html>
