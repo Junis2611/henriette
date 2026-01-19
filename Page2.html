@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liebesbrief – Seite 1 💌</title>
+
+<style>
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 40px 35px;
+    border-radius: 18px;
+    max-width: 480px;
+    width: 90%;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.letter {
+    font-size: 30px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Weiter-Button */
+.next {
+    display: block;
+    margin: 30px auto 0;
+    padding: 14px 28px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff5e78;
+    color: white;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="letter">
+        <p>
+            Liebe Henriette,<br><br>
+            ab dem Moment, in dem du in meinem Leben bist,
+            fühlt sich alles leichter an.
+            Du bist mein Lächeln, mein Gedanke
+            und mein Zuhause. ❤️
+        </p>
+    </div>
+
+    <button class="next" onclick="goToPage2()">Seite 3</button>
+</div>
+
+<script>
+function goToPage2() {
+    window.location.href = "seite2.html";
+}
+</script>
+
+</body>
+</html>
