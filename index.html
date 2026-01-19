@@ -8,43 +8,28 @@
 body {
     font-family: 'Georgia', serif;
     background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
 }
 
-/* Container */
 .container {
     background: white;
-    padding: 45px;
-    border-radius: 22px;
+    padding: 35px;
+    border-radius: 15px;
     text-align: center;
-    max-width: 520px;
-    width: 95%;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    max-width: 420px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* Titel */
-h1 {
-    font-size: 44px;
-    margin-bottom: 20px;
-}
-
-/* Frage */
-.question {
-    font-size: 28px;
-    margin-bottom: 25px;
-}
-
-/* Buttons */
 button {
-    padding: 18px 30px;
-    margin: 12px;
+    padding: 12px 20px;
+    margin: 10px;
     border: none;
-    border-radius: 14px;
-    font-size: 26px;
+    border-radius: 8px;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -57,32 +42,16 @@ button {
     background-color: #ccc;
 }
 
-/* Brieftext */
-.letter {
-    display: none;
-    font-size: 28px;
-    line-height: 2.0;
+.next {
+    background-color: #ff5e78;
+    color: white;
+    margin-top: 25px;
 }
 
-/* HANDY: NOCH GRÖSSER */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 48px;
-    }
-
-    .question {
-        font-size: 32px;
-    }
-
-    .letter {
-        font-size: 32px;
-        line-height: 2.1;
-    }
-
-    button {
-        font-size: 30px;
-        padding: 20px 34px;
-    }
+.letter {
+    display: none;
+    font-size: 32px;
+    line-height: 1.6;
 }
 </style>
 </head>
@@ -90,10 +59,10 @@ button {
 <body>
 
 <div class="container">
-    <h1 id="title">💌 Ein Liebesbrief</h1>
-    <p class="question" id="question">Möchtest du ihn öffnen?</p>
+    <h1 id="title">Ein Liebesbrief 💌 </h1>
+    <p id="question">Möchtest du ihn öffnen?</p>
 
-    <div class="buttons" id="buttons">
+    <div id="buttons">
         <button class="open" onclick="openLetter()">Öffnen</button>
         <button class="close" onclick="dontOpen()">Nicht öffnen</button>
     </div>
@@ -102,11 +71,13 @@ button {
         <p>
             Liebe Henriette,<br><br>
             ab dem Moment, in dem du in meinem Leben bist,
-            fühlt sich alles leichter an.<br><br>
+            fühlt sich alles leichter an.
             Du bist mein Lächeln, mein Gedanke
             und mein Zuhause. ❤️<br><br>
             Für immer dein.
         </p>
+
+        <button class="next" onclick="goToPage2()">Nächste Seite</button>
     </div>
 </div>
 
@@ -121,6 +92,11 @@ function openLetter() {
 function dontOpen() {
     alert("Dann halt nicht... Blödi... 💔");
 }
+
+function goToPage2() {
+    window.location.href = "page2.html";
+}
+
 </script>
 
 </body>
